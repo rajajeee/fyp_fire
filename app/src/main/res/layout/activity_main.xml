@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="20dp"
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email Here"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="10dp"
+        android:id="@+id/edtEmail"
+        android:inputType="textEmailAddress"
+        />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password Here"
+            android:id="@+id/edtPassword"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword"
+            />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinAccount"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIGN IN"
+            android:id="@+id/btnSignIn"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New User ?"
+            android:id="@+id/tvnew"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CREATE ACCOUNT"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/tvnew"
+                android:textColor="#000000"
+                android:id="@+id/tvSignUp"
+                />
+        </RelativeLayout>
+
+</LinearLayout>

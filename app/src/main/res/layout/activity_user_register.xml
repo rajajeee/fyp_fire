@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserRegister"
+    android:orientation="vertical"
+    >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name Here"
+        android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+        android:drawablePadding="10dp"
+        android:id="@+id/edtSignUpName"
+        android:inputType="textEmailAddress"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email Here"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="10dp"
+        android:id="@+id/edtSignUpEmail"
+        android:inputType="textEmailAddress"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password Here"
+        android:id="@+id/edtSignUpPassword"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="10dp"
+        android:inputType="textPassword"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contact Here"
+        android:id="@+id/edtSignUpContact"
+        android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+        android:drawablePadding="10dp"
+        android:inputType="textPassword"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/rdg"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:id="@+id/rdm"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:id="@+id/rdf"
+
+            />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SIGN UP"
+        android:id="@+id/btnSignUp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already Registered ? "
+            android:id="@+id/tvnewS"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN IN"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/tvnewS"
+            android:textColor="#000000"
+            android:id="@+id/tvSignIn"
+            />
+    </RelativeLayout>
+
+
+
+</LinearLayout>
