@@ -30,7 +30,13 @@ public class MainActivity extends AppCompatActivity {
         account.setAdapter(arrayAdapter);
     signIn = findViewById(R.id.btnSignIn);
     signUp = findViewById(R.id.tvSignUp);
-
+        webMethods methods = new webMethods(getApplicationContext());
+        signIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                methods.checkLogin(email.getText().toString(),password.getText().toString(),email,password);
+            }
+        });
     signUp.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {

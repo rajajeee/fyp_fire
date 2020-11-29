@@ -6,45 +6,101 @@
     android:layout_height="match_parent"
     tools:context=".UserRegister"
     android:orientation="vertical"
-    >
-    <EditText
-        android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:gravity="center"
+    android:padding="30dp">
+    <TextView
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Name Here"
-        android:drawableLeft="@drawable/ic_baseline_account_circle_24"
-        android:drawablePadding="10dp"
-        android:id="@+id/edtSignUpName"
-        android:inputType="textEmailAddress"
+        android:text="FIRE APP"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#000"
+        android:textStyle="bold"
         />
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
+        android:textColorHint="#606060"
+        app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
         android:layout_height="wrap_content"
-        android:hint="Email Here"
-        android:drawableLeft="@drawable/ic_baseline_email_24"
-        android:drawablePadding="10dp"
-        android:id="@+id/edtSignUpEmail"
-        android:inputType="textEmailAddress"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password Here"
-        android:id="@+id/edtSignUpPassword"
-        android:drawableLeft="@drawable/ic_baseline_lock_24"
-        android:drawablePadding="10dp"
-        android:inputType="textPassword"
-        />
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Name">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Contact Here"
-        android:id="@+id/edtSignUpContact"
-        android:drawableLeft="@drawable/ic_baseline_local_phone_24"
-        android:drawablePadding="10dp"
-        android:inputType="textPassword"
-        />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtSignUpName"
+            android:inputType="textPersonName"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:textColorHint="#606060"
+        app:startIconDrawable="@drawable/ic_baseline_alternate_email_24"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtSignUpEmail"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="5dp"
+        android:textColorHint="#606060"
+        android:layout_width="match_parent"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtSignUpPassword"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:textColorHint="#606060"
+        app:startIconDrawable="@drawable/ic_baseline_how_to_reg_24"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Age">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtSignUpAge"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:textColorHint="#606060"
+        app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Phone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtSignUpContact"
+            android:inputType="textPhonetic"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,14 +112,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Male"
+            android:buttonTint="#FF0000"
             android:id="@+id/rdm"
+            style="Widget.MaterialComponents.CompoundButton.RadioButton"
             />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female"
             android:id="@+id/rdf"
-
+            android:buttonTint="#FF0000"
+            style="Widget.MaterialComponents.CompoundButton.RadioButton"
             />
     </RadioGroup>
 
@@ -90,7 +149,7 @@
             android:text="SIGN IN"
             android:textStyle="bold"
             android:layout_toRightOf="@id/tvnewS"
-            android:textColor="#000000"
+            android:textColor="#FF0000"
             android:id="@+id/tvSignIn"
             />
     </RelativeLayout>

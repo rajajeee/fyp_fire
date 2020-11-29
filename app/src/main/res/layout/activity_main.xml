@@ -6,58 +6,100 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:padding="20dp"
-    >
-
-    <EditText
-        android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:gravity="center"
+    android:padding="30dp">
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Email Here"
-        android:drawableLeft="@drawable/ic_baseline_email_24"
-        android:drawablePadding="10dp"
-        android:id="@+id/edtEmail"
-        android:inputType="textEmailAddress"
+        android:text="FIRE APP"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#000"
+        android:textStyle="bold"
         />
-        <EditText
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/emailLayout"
+        android:layout_width="match_parent"
+        android:textColorHint="#606060"
+        app:startIconDrawable="@drawable/ic_baseline_alternate_email_24"
+        android:layout_height="wrap_content"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Email">
+
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password Here"
+            android:id="@+id/edtEmail"
+            android:inputType="textEmailAddress"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/passwordLayout"
+        android:textColorHint="#606060"
+        android:layout_width="match_parent"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/edtPassword"
-            android:drawableLeft="@drawable/ic_baseline_lock_24"
-            android:drawablePadding="10dp"
             android:inputType="textPassword"
             />
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinAccount"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="SIGN IN"
-            android:id="@+id/btnSignIn"
-            />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            >
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinAccount"
+        />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/btnSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGN IN"
+        />
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New User ?"
-            android:id="@+id/tvnew"
+            android:text="New User ? "
             />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CREATE ACCOUNT"
-                android:textStyle="bold"
-                android:layout_toRightOf="@id/tvnew"
-                android:textColor="#000000"
-                android:id="@+id/tvSignUp"
-                />
-        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" CREATE ACCOUNT"
+            android:id="@+id/tvSignUp"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+
 
 </LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    android:gravity="center"
+    android:padding="30dp">
+
+    <ImageButton
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:padding="12dp"
+        android:backgroundTint="@color/purple_700"
+        android:scaleType="fitCenter"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_baseline_image_24"
+        android:id="@+id/pickImage"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:textColorHint="#606060"
+        app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtRequestName"
+            android:inputType="textPersonName"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:textColorHint="#606060"
+        app:startIconDrawable="@drawable/ic_baseline_home_work_24"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Address">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtRequestAddress"
+            android:inputType="textPersonName"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiLat"
+            android:layout_marginTop="10dp"
+            android:layout_width="160dp"
+            android:textColorHint="#606060"
+            app:startIconDrawable="@drawable/ic_baseline_map_24"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Latitude">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtRequestLat"
+                android:inputType="textPersonName"
+                android:focusable="false"
+                android:editable="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tiLat"
+            android:layout_marginTop="10dp"
+            android:layout_width="160dp"
+            android:textColorHint="#606060"
+            app:startIconDrawable="@drawable/ic_baseline_map_24"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Longtitude">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtRequestLng"
+                android:inputType="textPersonName"
+                android:focusable="false"
+                android:editable="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET COORDINATES"
+        android:id="@+id/getCoordinates"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD REQUEST"
+        android:id="@+id/btnAddRequest"
+        />
+
+</LinearLayout>
